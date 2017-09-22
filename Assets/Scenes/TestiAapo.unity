@@ -130,6 +130,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114000704115543492, guid: 89450ef2605a46d4f94497cdddc65261,
+        type: 2}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 563453474}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 89450ef2605a46d4f94497cdddc65261, type: 2}
   m_IsPrefabParent: 0
@@ -244,24 +249,6 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 563453473}
   m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
---- !u!1 &1023463195 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1198946114064234, guid: 89450ef2605a46d4f94497cdddc65261,
-    type: 2}
-  m_PrefabInternal: {fileID: 166038695}
---- !u!114 &1023463196
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1023463195}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8852bba0f2807184ba48f1e0734d514f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healthBar: {fileID: 563453474}
-  health: 3
 --- !u!1 &1746337855
 GameObject:
   m_ObjectHideFlags: 0
