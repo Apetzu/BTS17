@@ -14,7 +14,7 @@ public class EnemyRanged : MonoBehaviour {
 	public bool shooting = false;
 	void Start () 
 	{
-
+		player = GameObject.FindWithTag ("Player");
 	}
 	void Update ()
 	{

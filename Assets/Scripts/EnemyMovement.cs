@@ -8,9 +8,10 @@ public class EnemyMovement : MonoBehaviour {
 	Vector3 playerPos;
 	public float speed = 10;
 
-	void Start () 
+
+	void Awake () 
 	{
-		
+		player = GameObject.FindWithTag ("Player");
 	}
 	void Update ()
 	{
