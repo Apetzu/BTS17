@@ -34,10 +34,13 @@ public class gaShroom : MonoBehaviour {
 		{
 			transform.position = Vector2.MoveTowards (transform.position, playerPos, -speed * Time.deltaTime);
 		}
-		if (Vector2.Distance (transform.position, playerPos) <= minRange || Vector2.Distance (transform.position, playerPos) == minRange) 
+		if (Vector2.Distance (transform.position, playerPos) <= minRange && gassenings == false || Vector2.Distance (transform.position, playerPos) == minRange && gassenings == false) 
 		{
-			StartCoroutine(FunGas ());
-
+			if (gassenings == false) 
+			{
+				StartCoroutine (FunGas ());
+				gassenings = true;
+			}
 		}
 		if (Vector2.Distance (transform.position, playerPos) >= maxRange && fleeing == true) 
 		{
@@ -50,10 +53,17 @@ public class gaShroom : MonoBehaviour {
 	}
 	IEnumerator FunGas()
 	{
-		Instantiate (FunGasCloud);
-		Destroy (FunGasCloud, 2f);
-		yield return new WaitForSeconds (1);
+		Gassening ();
+		yield return new WaitForSeconds (0.1F);
 		fleeing = true;
-	}	
+		gassenings = false;
+		yield return new WaitForSeconds (1);
+	}
+	void Gassening ()
+	{
+		var FunGasCloudy = Instantiate (FunGasCloud,transform.position,transform.rotation);
+		Destroy (FunGasCloudy, 2f);
+		gassenings = false;
+	}
 
 }
