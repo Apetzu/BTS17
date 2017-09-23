@@ -6,16 +6,29 @@ public class shroomer : MonoBehaviour {
 
 	public GameObject[] shrooms;
 	public Transform[] shroomColonies;
-	public float shroomTime = 1f;
-
+	public float shroomTime = 5f;
+	float timerlength = 7; 
+	public bool timerStart = false;
+	float time;
+	public float score;
 	void Start () 
 	{
 		InvokeRepeating	("Spawn", shroomTime, shroomTime);
+		timerStart = true;
 	}
 	
 	// Update is called once per frame
-	void Update () {
-		
+	void FixedUpdate () 
+	{
+		score += Time.deltaTime;
+		time += Time.deltaTime;
+		Debug.Log (shroomTime);
+		if (time >= timerlength && timerStart == true) 
+		{
+			shroomTime -= 0.1f;
+			time = 0f;
+		}
+
 	}
 	void Spawn ()
 	{
