@@ -47,7 +47,7 @@ public class EnemyRanged : MonoBehaviour {
 			shotThingymabob,
 			thingymabobSpawn.position,
 			thingymabobSpawn.rotation);
-		thingymabob.GetComponent<Rigidbody2D> ().velocity = thingymabob.transform.forward * 6;
+		thingymabob.GetComponent<Rigidbody2D> ().velocity = thingymabob.transform.forward * 9;
 		Destroy (thingymabob, 2.0f);
 	}
 
