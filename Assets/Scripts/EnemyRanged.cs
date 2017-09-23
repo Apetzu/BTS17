@@ -19,7 +19,10 @@ public class EnemyRanged : MonoBehaviour {
 	void Update ()
 	{
 		playerPos = player.transform.position;
-		thingymabobSpawn.LookAt (playerPos);
+		Vector3 diff = playerPos - transform.position;
+		diff.Normalize();
+		float rot_z = Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg;
+		transform.rotation = Quaternion.Euler(0f, 0f, rot_z - 90);
 	}
 
 	void FixedUpdate () 
@@ -47,7 +50,7 @@ public class EnemyRanged : MonoBehaviour {
 			shotThingymabob,
 			thingymabobSpawn.position,
 			thingymabobSpawn.rotation);
-		thingymabob.GetComponent<Rigidbody2D> ().velocity = thingymabob.transform.forward * 9;
+		thingymabob.GetComponent<Rigidbody2D> ().velocity = thingymabob.transform.up * 9;
 		Destroy (thingymabob, 2.0f);
 	}
 
