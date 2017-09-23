@@ -34,8 +34,9 @@ public class shroomcideMovement : MonoBehaviour {
 		}
 		if (gonGit == true && kaschroom == true) 
 		{
-			Debug.Log ("gon git");
-		}
+            player.GetComponent<playerHealth>().dropHealth(1);
+            gonGit = false;
+        }
 	}
 
 	IEnumerator Mushroomcloud ()
@@ -55,4 +56,13 @@ public class shroomcideMovement : MonoBehaviour {
 			gonGit = true;
 		}
 	}
+
+    void OnTriggerExit2D(Collider2D other)
+    {
+        Debug.Log("riggered?");
+        if (other.tag == "Player")
+        {
+            gonGit = false;
+        }
+    }
 }

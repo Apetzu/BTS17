@@ -104,6 +104,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boxCol: {fileID: 61580432877314674}
+  maxRecoil: 0
 --- !u!114 &114722069229470642
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -115,7 +116,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9bce368f234d134f9d97219e5d797de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 1.5
+  smoothSpeed: 0.5
 --- !u!212 &212202127422406738
 SpriteRenderer:
   m_ObjectHideFlags: 1

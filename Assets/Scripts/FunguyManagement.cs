@@ -8,6 +8,7 @@ public class FunguyManagement : MonoBehaviour {
 	public bool quickShroom = false;
 	public bool healthShroom = false;
 	public bool multishotShroom = false;
+    public bool gasShroom = false;
 
 	public GameObject shroomster;
 	public Transform mushshroom;
@@ -57,7 +58,16 @@ public class FunguyManagement : MonoBehaviour {
 				Destroy(gameObject);
 			}
 		}
-	}
+        if (gasShroom == true)
+        {
+            //the effect applied by the shroom or the shroom itself added to player
+            if (Input.GetKeyDown(KeyCode.Alpha1) && tobePicked == true)
+            {
+                //Place the shroom in slot 1	
+                Destroy(gameObject);
+            }
+        }
+    }
 	void OnTriggerStay2D (Collider2D other)
 	{
 		if (other.tag == "Player") 

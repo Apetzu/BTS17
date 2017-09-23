@@ -5,28 +5,32 @@ using UnityEngine.UI;
 
 public class playerHealth : MonoBehaviour {
 	public Image healthBar;
-	float maxHealth = 3;
-	public float health = 3;
-	float minhealth = 0;
-	void Start ()
+	public float maxHealth = 3;
+	float health;
+    public bool playerDead = false;
+
+    void Start()
     {
-		
-	}
-	
-	void Update () 
-	{
-		float calcHealth = health / maxHealth;
-		SetHealth (calcHealth);
+        health = maxHealth;
+    }
 
-		if (health <= minhealth)
-		{
-			Debug.Log("You Died");
-		}
-	}
+    public void dropHealth (int amount = 1)
+    {
+        health -= amount;
+        healthBar.fillAmount = health / maxHealth;
+        if (health <= 0)
+        {
+            playerDead = true;
+        }
+    }
 
-    void SetHealth(float health)
-	{
-		healthBar.fillAmount = health;
-	}
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.layer == 8)
+        {
+            dropHealth(1);
+            Destroy(collision.gameObject);
+        }
+    }
 
 }

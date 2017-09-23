@@ -38,6 +38,7 @@ GameObject:
   - component: {fileID: 23421448780413570}
   - component: {fileID: 61106095121312952}
   - component: {fileID: 114349244686703780}
+  - component: {fileID: 114011565238206896}
   m_Layer: 9
   m_Name: RangedEnemy
   m_TagString: Untagged
@@ -52,7 +53,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1665565373026158}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -12.67297, y: -2.09192, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4763739582711014}
@@ -124,6 +125,19 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
+--- !u!114 &114011565238206896
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1665565373026158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b69442a1ad651545894e7ae5214ede0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 3
+  healthShroom: 0
 --- !u!114 &114349244686703780
 MonoBehaviour:
   m_ObjectHideFlags: 1
