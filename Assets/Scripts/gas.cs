@@ -33,7 +33,7 @@ public class gas : MonoBehaviour {
 		while(1 < transform.localScale.x)
 		{
 			timer += Time.deltaTime;
-			transform.localScale -= new Vector3(1, 1, 1) * Time.deltaTime * growFactor;
+			transform.localScale -= new Vector3(1, 1, 1) * Time.deltaTime * growFactor / 2;
 			yield return null;
 		}
 	

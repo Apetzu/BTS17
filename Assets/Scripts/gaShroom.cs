@@ -62,7 +62,7 @@ public class gaShroom : MonoBehaviour {
 	void Gassening ()
 	{
 		var FunGasCloudy = Instantiate (FunGasCloud,transform.position,transform.rotation);
-		Destroy (FunGasCloudy, 2f);
+		Destroy (FunGasCloudy, 6f);
 		gassenings = false;
 	}
 

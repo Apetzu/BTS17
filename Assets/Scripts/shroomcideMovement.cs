@@ -12,6 +12,7 @@ public class shroomcideMovement : MonoBehaviour {
 	public bool kaschroom = false;
 	bool gonGit;
     public float damage;
+	public GameObject shroomticleSys;
 
 	void Awake () 
 	{
@@ -46,6 +47,7 @@ public class shroomcideMovement : MonoBehaviour {
 		Debug.Log ("tremble");
 		yield return new WaitForSeconds (4);
 		kaschroom = true;
+		shroomticleSys.SetActive (true);
 		yield return new WaitForSeconds (0.5f);
 		Destroy(this.gameObject);
 	}

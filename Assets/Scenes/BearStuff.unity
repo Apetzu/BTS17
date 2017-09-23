@@ -295,10 +295,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
-    - target: {fileID: 1718375417195890, guid: 606299bf82944bd4091953305849c67e, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 606299bf82944bd4091953305849c67e, type: 2}
   m_IsPrefabParent: 0
@@ -428,7 +424,7 @@ Prefab:
         type: 2}
     - target: {fileID: 1665565373026158, guid: 40176210ae62172468fe8a9e02e5f0f8, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 40176210ae62172468fe8a9e02e5f0f8, type: 2}
@@ -851,3 +847,4 @@ MonoBehaviour:
   - {fileID: 0}
   shroomTime: 5
   timerStart: 0
+  score: 0
