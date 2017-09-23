@@ -13,6 +13,8 @@ public class FunguyManagement : MonoBehaviour {
 	public GameObject shroomster;
 	public Transform mushshroom;
 	bool tobePicked = false;
+    public float shoomsterTimer;
+    public KeyCode slotButton;
 	// Use this for initialization
 	void Start () 
 	{
@@ -25,45 +27,50 @@ public class FunguyManagement : MonoBehaviour {
 		if (boomShroom == true) 
 		{
 			//the effect applied by the shroom or the shroom itself added to player
-			if(Input.GetKeyDown(KeyCode.Alpha1) && tobePicked == true)
+			if(Input.GetKeyDown(slotButton) && tobePicked == true)
 			{
-				//Place the shroom in slot 1	
+                // 1
+                GameObject.FindGameObjectWithTag("Player").gameObject.GetComponent<playerPowerup>().boomShroomPowerup();
 				Destroy(gameObject);
 			}
 		}
-		if (quickShroom == true) 
+		else if (quickShroom == true) 
 		{
 			//the effect applied by the shroom or the shroom itself added to player
-			if(Input.GetKeyDown(KeyCode.Alpha1) && tobePicked == true)
+			if(Input.GetKeyDown(slotButton) && tobePicked == true)
 			{
-				//Place the shroom in slot 1	
-				Destroy(gameObject);
+                // 2
+                GameObject.FindGameObjectWithTag("Player").gameObject.GetComponent<playerPowerup>().quickShroomPowerup();
+                Destroy(gameObject);
 			}
 		}
-		if (healthShroom == true) 
+		else if (multishotShroom == true) 
 		{
 			//the effect applied by the shroom or the shroom itself added to player
-			if(Input.GetKeyDown(KeyCode.Alpha1) && tobePicked == true)
+			if(Input.GetKeyDown(slotButton) && tobePicked == true)
 			{
-				//Place the shroom in slot 1	
-				Destroy(gameObject);
+                // 3
+                GameObject.FindGameObjectWithTag("Player").gameObject.GetComponent<playerPowerup>().multiShroomPowerup();
+                Destroy(gameObject);
 			}
 		}
-		if (multishotShroom == true) 
-		{
-			//the effect applied by the shroom or the shroom itself added to player
-			if(Input.GetKeyDown(KeyCode.Alpha1) && tobePicked == true)
-			{
-				//Place the shroom in slot 1	
-				Destroy(gameObject);
-			}
-		}
-        if (gasShroom == true)
+        else if (gasShroom == true)
         {
             //the effect applied by the shroom or the shroom itself added to player
-            if (Input.GetKeyDown(KeyCode.Alpha1) && tobePicked == true)
+            if (Input.GetKeyDown(slotButton) && tobePicked == true)
             {
-                //Place the shroom in slot 1	
+                // 4
+                GameObject.FindGameObjectWithTag("Player").gameObject.GetComponent<playerPowerup>().gasShroomPowerup();
+                Destroy(gameObject);
+            }
+        }
+        else if (healthShroom == true)
+        {
+            //the effect applied by the shroom or the shroom itself added to player
+            if (Input.GetKeyDown(slotButton) && tobePicked == true)
+            {
+                // 5
+                GameObject.FindGameObjectWithTag("Player").gameObject.GetComponent<playerPowerup>().healthShroomPowerup();
                 Destroy(gameObject);
             }
         }
@@ -81,7 +88,7 @@ public class FunguyManagement : MonoBehaviour {
 	}
 	IEnumerator Shroomsterisation ()
 	{
-		yield return new WaitForSeconds (7);
+		yield return new WaitForSeconds (shoomsterTimer);
 		var shroomsterThing = (GameObject)Instantiate(
 			shroomster,
 			mushshroom.position,
