@@ -161,3 +161,4 @@ MonoBehaviour:
   speed: 10
   expshrooming: 0
   kaschroom: 0
+  damage: 5

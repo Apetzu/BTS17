@@ -11,6 +11,7 @@ public class shroomcideMovement : MonoBehaviour {
 	public bool expshrooming = false;
 	public bool kaschroom = false;
 	bool gonGit;
+    public float damage;
 
 	void Awake () 
 	{
@@ -34,7 +35,7 @@ public class shroomcideMovement : MonoBehaviour {
 		}
 		if (gonGit == true && kaschroom == true) 
 		{
-            player.GetComponent<playerHealth>().dropHealth(1);
+            player.GetComponent<playerHealth>().dropHealth(damage);
             gonGit = false;
         }
 	}

@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 23428965909693604}
   - component: {fileID: 58436856408891168}
   - component: {fileID: 114028132904505174}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: FunGas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -109,3 +109,6 @@ MonoBehaviour:
   maxSize: 5
   growFactor: 7
   waitTime: 1
+  gasDamage: 1
+  gasTicks: 2
+  gasTimes: 3

@@ -13,12 +13,12 @@ public class EnemyHealth : MonoBehaviour
         health = maxHealth;
     }
 
-    public void dropHealth(int amount = 1)
+    public void dropHealth(float amount = 1)
     {
         health -= amount;
         if (health <= 0)
         {
-            
+            Debug.Log(this.gameObject.name + "is död");
             if (healthShroom == false)
             {
                 Destroy(this.gameObject);

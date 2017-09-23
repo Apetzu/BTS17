@@ -7,6 +7,9 @@ public class gas : MonoBehaviour {
 	public float maxSize;
 	public float growFactor;
 	public float waitTime;
+    public float gasDamage;
+    public float gasTicks;
+    public int gasTimes;
 
 	void Start()
 	{
@@ -37,4 +40,12 @@ public class gas : MonoBehaviour {
 		timer = 0;
 		yield return new WaitForSeconds(waitTime);
 	}
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            collision.gameObject.GetComponent<playerHealth>().dropHealthGas(gasDamage, gasTimes, gasTicks);
+        }
+    }
 }
