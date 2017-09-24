@@ -307,6 +307,11 @@ Prefab:
     - target: {fileID: 114319867541283576, guid: c0cc6c4a6bc4278429a57f26db2ae7ce,
         type: 2}
       propertyPath: quickShroom
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114319867541283576, guid: c0cc6c4a6bc4278429a57f26db2ae7ce,
+        type: 2}
+      propertyPath: healthShroom
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -572,6 +577,11 @@ Prefab:
       propertyPath: PMove
       value: 
       objectReference: {fileID: 995266915}
+    - target: {fileID: 114926313716002612, guid: 89450ef2605a46d4f94497cdddc65261,
+        type: 2}
+      propertyPath: healAmount
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 89450ef2605a46d4f94497cdddc65261, type: 2}
   m_IsPrefabParent: 0

@@ -18,7 +18,6 @@ public class playerPowerup : MonoBehaviour {
 	public float powerTime;
 	public PlayerMovement PMove;
 	public PlayerShoot PShoot;
-	public playerHealth PHealth;
 
 	float realSpeed;
 	public float speedboostAmount;
@@ -54,7 +53,7 @@ public class playerPowerup : MonoBehaviour {
     public void healthShroomPowerup()
     {
         // More health, obviously
-		PHealth.health += healAmount;
+		this.GetComponent<playerHealth>().health += healAmount;
     }
 	IEnumerator speedBoost()
 	{

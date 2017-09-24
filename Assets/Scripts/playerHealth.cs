@@ -22,7 +22,9 @@ public class playerHealth : MonoBehaviour {
 
     void Update()
     {
-        if (gasHealthDrop == true)
+		healthBar.fillAmount = health / maxHealth;
+
+		if (gasHealthDrop == true)
         {
             if (gasDamageTimes != 0)
             {
@@ -44,7 +46,6 @@ public class playerHealth : MonoBehaviour {
     public void dropHealth (float amount = 1.0f)
     {
         health -= amount;
-        healthBar.fillAmount = health / maxHealth;
         if (health <= 0f)
         {
             playerDead = true;
