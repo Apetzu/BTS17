@@ -64,6 +64,7 @@ public class playerPowerup : MonoBehaviour {
 	IEnumerator boomShot ()
 	{
 		// päälle
+
 		yield return new WaitForSeconds (powerTime);
         // pois päältä
 
