@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class shroomer : MonoBehaviour {
 
@@ -11,6 +12,8 @@ public class shroomer : MonoBehaviour {
 	public bool timerStart = false;
 	float time;
 	public float score;
+	public Text countText;
+	public GameObject scorePanel;
 	void Start () 
 	{
 		InvokeRepeating	("Spawn", shroomTime, shroomTime);
@@ -36,5 +39,10 @@ public class shroomer : MonoBehaviour {
 		int shroomColonyIndex = Random.Range(0,shroomColonies.Length);
 
 		Instantiate (shrooms [shroomsIndex], shroomColonies [shroomColonyIndex].position, shroomColonies [shroomColonyIndex].rotation);
+	}
+	public void scoreText ()
+	{
+		scorePanel.SetActive (true);
+		countText.text = score.ToString();
 	}
 }

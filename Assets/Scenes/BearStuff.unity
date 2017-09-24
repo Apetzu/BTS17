@@ -476,6 +476,12 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 89450ef2605a46d4f94497cdddc65261, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &1147417503 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114185740450573050, guid: 97b5670e4acdf754393d139e052f1496,
+    type: 2}
+  m_PrefabInternal: {fileID: 1456820660}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &1193600935
 GameObject:
   m_ObjectHideFlags: 0
@@ -629,6 +635,96 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114185740450573050, guid: 97b5670e4acdf754393d139e052f1496,
+        type: 2}
+      propertyPath: m_Text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114185740450573050, guid: 97b5670e4acdf754393d139e052f1496,
+        type: 2}
+      propertyPath: m_FontData.m_Alignment
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114185740450573050, guid: 97b5670e4acdf754393d139e052f1496,
+        type: 2}
+      propertyPath: m_FontData.m_FontSize
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 114185740450573050, guid: 97b5670e4acdf754393d139e052f1496,
+        type: 2}
+      propertyPath: m_FontData.m_MinSize
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224003160780794516, guid: 97b5670e4acdf754393d139e052f1496,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224003160780794516, guid: 97b5670e4acdf754393d139e052f1496,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 200.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 114185740450573050, guid: 97b5670e4acdf754393d139e052f1496,
+        type: 2}
+      propertyPath: m_FontData.m_MaxSize
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 114185740450573050, guid: 97b5670e4acdf754393d139e052f1496,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114185740450573050, guid: 97b5670e4acdf754393d139e052f1496,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114185740450573050, guid: 97b5670e4acdf754393d139e052f1496,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114185740450573050, guid: 97b5670e4acdf754393d139e052f1496,
+        type: 2}
+      propertyPath: m_FontData.m_FontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114839625112324456, guid: 97b5670e4acdf754393d139e052f1496,
+        type: 2}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114839625112324456, guid: 97b5670e4acdf754393d139e052f1496,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 0.5176471
+      objectReference: {fileID: 0}
+    - target: {fileID: 114839625112324456, guid: 97b5670e4acdf754393d139e052f1496,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0.7725491
+      objectReference: {fileID: 0}
+    - target: {fileID: 114839625112324456, guid: 97b5670e4acdf754393d139e052f1496,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0.10588236
+      objectReference: {fileID: 0}
+    - target: {fileID: 114185740450573050, guid: 97b5670e4acdf754393d139e052f1496,
+        type: 2}
+      propertyPath: m_FontData.m_AlignByGeometry
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224003160780794516, guid: 97b5670e4acdf754393d139e052f1496,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224003160780794516, guid: 97b5670e4acdf754393d139e052f1496,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 247
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 97b5670e4acdf754393d139e052f1496, type: 2}
   m_IsPrefabParent: 0
@@ -748,6 +844,11 @@ Transform:
   m_Father: {fileID: 2100286590}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1969509045 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1873031398539904, guid: 97b5670e4acdf754393d139e052f1496,
+    type: 2}
+  m_PrefabInternal: {fileID: 1456820660}
 --- !u!1001 &1975582136
 Prefab:
   m_ObjectHideFlags: 0
@@ -848,3 +949,5 @@ MonoBehaviour:
   shroomTime: 5
   timerStart: 0
   score: 0
+  countText: {fileID: 1147417503}
+  scorePanel: {fileID: 1969509045}
