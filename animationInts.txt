@@ -1,0 +1,5 @@
+0 = front
+1 = back
+2 = side
+3 = diaup
+4 = diadown

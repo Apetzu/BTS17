@@ -240,6 +240,25 @@ Prefab:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1746337859}
+    - target: {fileID: 114185740450573050, guid: 97b5670e4acdf754393d139e052f1496,
+        type: 2}
+      propertyPath: m_Text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1873031398539904, guid: 97b5670e4acdf754393d139e052f1496, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224706085487041988, guid: 97b5670e4acdf754393d139e052f1496,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 501.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224003160780794516, guid: 97b5670e4acdf754393d139e052f1496,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 474.6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 97b5670e4acdf754393d139e052f1496, type: 2}
   m_IsPrefabParent: 0
@@ -292,6 +311,11 @@ Prefab:
     - target: {fileID: 4454357384963712, guid: c0cc6c4a6bc4278429a57f26db2ae7ce, type: 2}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114319867541283576, guid: c0cc6c4a6bc4278429a57f26db2ae7ce,
+        type: 2}
+      propertyPath: healthShroom
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c0cc6c4a6bc4278429a57f26db2ae7ce, type: 2}
