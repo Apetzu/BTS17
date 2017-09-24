@@ -15,33 +15,69 @@ public class playerPowerup : MonoBehaviour {
      * healthShroom =   5
      */
 
+	public float powerTime;
+	public PlayerMovement PMove;
+	public PlayerShoot PShoot;
+	public playerHealth PHealth;
+
+	float realSpeed;
+	public float speedboostAmount;
+	public float healAmount;
+	void Start()
+	{
+		realSpeed = PMove.speed;
+	}
     public void boomShroomPowerup()
     {
         // "Explosive ammo"
-
+		StartCoroutine(boomShot());
     }
 
     public void quickShroomPowerup()
     {
         // Speed boost
-
+		StartCoroutine(speedBoost());
     }
 
     public void multiShroomPowerup()
     {
         // Shotgun
-
+		StartCoroutine(multiShot());
     }
 
     public void gasShroomPowerup()
     {
         // "Gas ammo"
-
+		StartCoroutine(poisonShot());
     }
 
     public void healthShroomPowerup()
     {
         // More health, obviously
-
+		PHealth.health += healAmount;
     }
+	IEnumerator speedBoost()
+	{
+		PMove.speed += speedboostAmount;
+		yield return new WaitForSeconds (powerTime);
+		PMove.speed = realSpeed;
+	}
+	IEnumerator boomShot ()
+	{
+		
+		yield return new WaitForSeconds (powerTime);
+
+	}
+	IEnumerator multiShot ()
+	{
+		
+		yield return new WaitForSeconds (powerTime);
+
+	}
+	IEnumerator poisonShot ()
+	{
+		
+		yield return new WaitForSeconds (powerTime);
+
+	}
 }

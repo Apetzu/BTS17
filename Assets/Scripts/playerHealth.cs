@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class playerHealth : MonoBehaviour {
 	public Image healthBar;
 	public float maxHealth = 3f;
-	float health;
+	public float health;
     public bool playerDead = false;
     bool gasHealthDrop;
     float gasDamage;
