@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 92318203415725398}
   - component: {fileID: 124776866970739038}
   - component: {fileID: 81285344176501194}
+  - component: {fileID: 114921339873411522}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -207,7 +208,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boxCol: {fileID: 61580432877314674}
-  maxRecoil: 0
+  maxRecoil: 200
+  multiShot: 0
+  explosiveAmmo: 0
+  poisonAmmo: 0
+  defaultDamage: 1
+  damage: 0
+  explosionEffect: {fileID: 1390608571686436, guid: 73d5bb213380c254fb84ef6bf25f490a,
+    type: 2}
 --- !u!114 &114722069229470642
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -221,6 +229,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1.5
   smoothSpeed: 0.5
+--- !u!114 &114921339873411522
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1861967990193012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 335842c150a3ed943896b8974ef37714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shrooms: []
+  shroomColonies: []
+  shroomTime: 5
+  timerStart: 0
+  score: 0
+  countText: {fileID: 0}
+  scorePanel: {fileID: 0}
 --- !u!114 &114926313716002612
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -232,11 +258,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e11abf52b2e6a1445be9ae411568967f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  powerTime: 0
+  powerTime: 5
   PMove: {fileID: 0}
   PShoot: {fileID: 0}
-  speedboostAmount: 0
-  healAmount: 0
+  speedboostAmount: 5
+  healAmount: 2
 --- !u!124 &124776866970739038
 Behaviour:
   m_ObjectHideFlags: 1

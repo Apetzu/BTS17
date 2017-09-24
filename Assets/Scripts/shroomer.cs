@@ -14,6 +14,7 @@ public class shroomer : MonoBehaviour {
 	public float score;
 	public Text countText;
 	public GameObject scorePanel;
+    bool gameover = false;
 	void Start () 
 	{
 		InvokeRepeating	("Spawn", shroomTime, shroomTime);
@@ -23,16 +24,18 @@ public class shroomer : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate () 
 	{
-		score += Time.deltaTime;
-		time += Time.deltaTime;
-		Debug.Log (shroomTime);
-		if (time >= timerlength && timerStart == true) 
-		{
-			shroomTime -= 0.1f;
-			time = 0f;
-		}
+        if (gameover == false)
+        {
+            score += Time.deltaTime;
+		    time += Time.deltaTime;
+		    if (time >= timerlength && timerStart == true) 
+		    {
+			    shroomTime -= 0.1f;
+			    time = 0f;
+		    }
+        }
 
-	}
+    }
 	void Spawn ()
 	{
 		int shroomsIndex = Random.Range (0, shrooms.Length);
@@ -44,5 +47,6 @@ public class shroomer : MonoBehaviour {
 	{
 		scorePanel.SetActive (true);
 		countText.text = score.ToString();
+        gameover = true;
 	}
 }

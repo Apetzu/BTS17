@@ -49,6 +49,8 @@ public class playerHealth : MonoBehaviour {
         if (health <= 0f)
         {
             playerDead = true;
+            // Game over
+            Camera.current.gameObject.GetComponent<shroomer>().scoreText();
         }
     }
 

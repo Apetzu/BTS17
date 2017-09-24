@@ -24,7 +24,7 @@ public class playerPowerup : MonoBehaviour {
 	public float healAmount;
 	void Start()
 	{
-		realSpeed = PMove.speed;
+		realSpeed = this.GetComponent<PlayerMovement>().speed;
 	}
     public void boomShroomPowerup()
     {
@@ -57,28 +57,30 @@ public class playerPowerup : MonoBehaviour {
     }
 	IEnumerator speedBoost()
 	{
-		PMove.speed += speedboostAmount;
+        this.GetComponent<PlayerMovement>().speed += speedboostAmount;
 		yield return new WaitForSeconds (powerTime);
-		PMove.speed = realSpeed;
+        this.GetComponent<PlayerMovement>().speed = realSpeed;
 	}
 	IEnumerator boomShot ()
 	{
-		// päälle
-
-		yield return new WaitForSeconds (powerTime);
+        // päälle
+        this.gameObject.GetComponent<PlayerShoot>().explosiveAmmo = true;
+        this.gameObject.GetComponent<PlayerShoot>().damage *= 2;
+        yield return new WaitForSeconds (powerTime);
         // pois päältä
-
-	}
+        this.gameObject.GetComponent<PlayerShoot>().damage = this.gameObject.GetComponent<PlayerShoot>().defaultDamage;
+        this.gameObject.GetComponent<PlayerShoot>().multiShot = false;
+    }
 	IEnumerator multiShot ()
 	{
-		
-		yield return new WaitForSeconds (powerTime);
-
-	}
+        this.gameObject.GetComponent<PlayerShoot>().multiShot = true;
+        yield return new WaitForSeconds (powerTime);
+        this.gameObject.GetComponent<PlayerShoot>().multiShot = false;
+    }
 	IEnumerator poisonShot ()
 	{
-		
-		yield return new WaitForSeconds (powerTime);
-
-	}
+        this.gameObject.GetComponent<PlayerShoot>().poisonAmmo = true;
+        yield return new WaitForSeconds (powerTime);
+        this.gameObject.GetComponent<PlayerShoot>().poisonAmmo = false;
+    }
 }
